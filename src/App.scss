@@ -1,38 +1,18 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
+  height: 100vh;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  // A bit *too* light
+  // background-color: lightseagreen;
+  // Nope, still too dark
+  // background-color: royalblue;
+
+  // background-color: teal;
+  // background-color: steelblue;
+  // A linear combination of teal and steelblue from https://www.w3schools.com/colors/colors_mixer.asp?colorbottom=008080&colortop=FFFFFF
+  background-color: #23819a;
 }

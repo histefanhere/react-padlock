@@ -1,4 +1,53 @@
 .digit {
     // Shows all the digits next to one another
     display: inline-block;
+
+    .digit-label {
+        font-size: 2.5rem;
+        text-align: center;
+        vertical-align: middle;
+        line-height: normal;
+    }
+
+    .digit-btn {
+        // display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        height: 60px;
+        width: 60px;
+        border-radius: 30px;
+        background-color: rgba(0, 0, 0, 0);
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        // Get rid of button's stupid defaults
+        padding: 0;
+        text-decoration: none;
+        margin: 0;
+        border: none;
+
+        span {
+            display: block;
+            margin: 0 auto;
+            border-style: solid;
+            height: 0px;
+            width: 0px;
+        }
+
+        &:first-child span {
+            border-color: transparent transparent rgba(0, 0, 0, 0.3);
+            border-width: 0px 16px 16px;
+        }
+        &:last-child span {
+            border-color: rgba(0, 0, 0, 0.3) transparent transparent;
+            // border-width: 16px 16px 16px;
+            border-width: 16px 16px 0;
+        }
+    }
 }
+
+

@@ -17,15 +17,11 @@ function Digit (props: DigitProps) {
 
     return (
         <div className="digit">
-            <button className="digit-btn" onClick={() => { props.onClick(digit, 1) }}>
-                {"/\\"}
-            </button>
+            <button className="digit-btn" onClick={() => { props.onClick(digit, 1) }}><span></span></button>
             <div className="digit-label">
                 {`${props.value}`}
             </div>
-            <button className="digit-btn" onClick={() => { props.onClick(digit, -1) }}>
-                {"\\/"}
-            </button>
+            <button className="digit-btn" onClick={() => { props.onClick(digit, -1) }}><span></span></button>
         </div>
     );
 }

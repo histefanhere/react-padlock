@@ -1,15 +1,25 @@
 import React, { useState } from 'react';
+// import Anime from 'react-anime';
+
 import './Padlock.scss';
 import Digit from './Digit';
+import { ReactComponent as Shackle } from './shackle.svg';
 
 function Padlock() {
     const [values, setValues] = useState([0, 0, 0]);
+    const [locked, setLockState] = useState(true);
 
     const correctValues = [1, 2, 3];
 
-    const handleClick = (id: number, direc: number) => {
-        // console.log("Clicked " + id + " in direction of " + direc);
+    // Locks or Unlocks the padlock
+    const toggleLock = () => {
+        setLockState(!locked);
+    }
 
+    const handleClick = (id: number, direc: number) => {
+        if (!locked) {
+            return;
+        }
         // Keeps `values` immutable
         let newValues: Array<number> = values.slice();
         newValues[id] += direc;
@@ -32,21 +42,32 @@ function Padlock() {
     const validate = () => {
         const correct: boolean = isCorrect();
         if (correct) {
-            alert("Correct!");
+            console.log('correct!');
+            toggleLock();
         }
         else {
-            alert("Wrong!");
+            console.log('wrong!');
         }
     }
 
     return (
-        <div className="padlock">
-            <h1>Padlock</h1>
-            {/* This could be done in a loop, but it'd be more effort than it's worth. */}
-            <Digit digitID={0} value={values[0]} onClick={handleClick}/>
-            <Digit digitID={1} value={values[1]} onClick={handleClick}/>
-            <Digit digitID={2} value={values[2]} onClick={handleClick}/>
-            <button className="validate-btn" onClick={validate}>Validate</button>
+        <div className="padlock-app">
+            <div className="padlock">
+                {locked ?
+                    <Shackle className="shackle" style={{transform: 'translateY(155px)'}}/>
+                    : 
+                    <Shackle className="shackle" style={{transform: 'translateY(55px)'}}/>
+                }
+                <div className="padlock-body">
+                    {/* This could be done in a loop, but it'd be more effort than it's worth. */}
+                    <Digit digitID={0} value={values[0]} onClick={handleClick}/>
+                    <Digit digitID={1} value={values[1]} onClick={handleClick}/>
+                    <Digit digitID={2} value={values[2]} onClick={handleClick}/>
+                </div>
+            </div>
+            <div className="btns">
+                <button className="validate-btn" onClick={validate}>Validate</button>
+            </div>
         </div>
     );
 }
