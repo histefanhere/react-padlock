@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import Anime from 'react-anime';
+import anime from 'animejs';
 
 import './Padlock.scss';
 import Digit from './Digit';
@@ -10,6 +10,9 @@ function Padlock() {
     const [locked, setLockState] = useState(true);
 
     const correctValues = [1, 2, 3];
+
+    // Reference to itself so we can animate the padlock
+    const ref = React.createRef<HTMLDivElement>();
 
     // Locks or Unlocks the padlock
     const toggleLock = () => {
@@ -42,17 +45,33 @@ function Padlock() {
     const validate = () => {
         const correct: boolean = isCorrect();
         if (correct) {
-            console.log('correct!');
             toggleLock();
         }
         else {
-            console.log('wrong!');
+            if (ref && ref.current) {
+                anime({
+                    targets: ref.current,
+                    translateX: [
+                        { value: '6px' },
+                        { value: '-6px' },
+                        { value: '6px' },
+                        { value: '0px' }
+                    ],
+                    // scale: [
+                    //     { value: 0.99 },
+                    //     { value: 1}
+                    // ],
+                    duration: 400,
+                    autoplay: true,
+                    easing: 'easeInOutSine'
+                });
+            }
         }
     }
 
     return (
         <div className="padlock-app">
-            <div className="padlock">
+            <div className="padlock" ref={ref}>
                 <Shackle locked={locked}/>
                 <div className="padlock-body">
                     {/* This could be done in a loop, but it'd be more effort than it's worth. */}
