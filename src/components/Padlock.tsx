@@ -5,8 +5,18 @@ import './Padlock.scss';
 import Digit from './Digit';
 import { ReactComponent as Shackle } from './shackle.svg';
 
+// Utility function for randomly generating a number (inclusive)
+const randomInt = (min: number, max: number): number => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
+
+
 function Padlock() {
-    const [values, setValues] = useState([0, 0, 0]);
+    // Generate a list of 3 random numbers to be the initial values of the counters
+    let initialValues: number[] = Array(3)
+    for (let i=0; i<initialValues.length; i++) initialValues[i] = randomInt(0, 9);
+
+    const [values, setValues] = useState(initialValues);
     const [locked, setLockState] = useState(true);
 
     const correctValues = [1, 2, 3];
@@ -22,7 +32,7 @@ function Padlock() {
         }
         // Keeps `values` immutable
         let newValues: Array<number> = values.slice();
-        newValues[id] += direc;
+        newValues[id] = (newValues[id] + direc + 10) % 10;
         setValues(newValues);
     }
 
