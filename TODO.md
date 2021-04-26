@@ -11,6 +11,8 @@
   - https://codepen.io/alaingalvan/pen/WGJLmE
   - https://www.w3schools.com/cssref/css3_pr_transform.asp
 
+- README
+
 # Useful Links
 
 Typescript Cheatsheet

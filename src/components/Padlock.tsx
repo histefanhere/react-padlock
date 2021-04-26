@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Anime from 'react-anime';
+// import Anime from 'react-anime';
 
 import './Padlock.scss';
 import Digit from './Digit';
-import shackle from './shackle.svg';
+import Shackle from './Shackle';
 
 function Padlock() {
     const [values, setValues] = useState([0, 0, 0]);
@@ -53,29 +53,7 @@ function Padlock() {
     return (
         <div className="padlock-app">
             <div className="padlock">
-                {locked ? (
-                    <Anime 
-                        easing="easeInBack"
-                        duration={500}
-                        loop={false}
-                        autoplay={true}
-                        translateY={["55px", "155px"]}
-                    >
-                        <img src={shackle} alt="shackle" className="shackle"/>
-                    </Anime>
-                ) : (
-                    <div>
-                        <Anime 
-                            easing="easeOutElastic"
-                            duration={700}
-                            loop={false}
-                            autoplay={true}
-                            translateY={["155px", "55px"]}
-                        >
-                            <img src={shackle} alt="shackle" className="shackle"/>
-                        </Anime>
-                    </div>
-                )}
+                <Shackle locked={locked}/>
                 <div className="padlock-body">
                     {/* This could be done in a loop, but it'd be more effort than it's worth. */}
                     <Digit digitID={0} value={values[0]} onClick={handleClick}/>
