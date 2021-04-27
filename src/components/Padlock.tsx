@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-// import Anime from 'react-anime';
+import anime from 'animejs';
 
 import './Padlock.scss';
 import Digit from './Digit';
-import { ReactComponent as Shackle } from './shackle.svg';
+import Shackle from './Shackle';
 
 // Utility function for randomly generating a number (inclusive)
 const randomInt = (min: number, max: number): number => {
@@ -20,6 +20,9 @@ function Padlock() {
     const [locked, setLockState] = useState(true);
 
     const correctValues = [1, 2, 3];
+
+    // Reference to itself so we can animate the padlock
+    const ref = React.createRef<HTMLDivElement>();
 
     // Locks or Unlocks the padlock
     const toggleLock = () => {
@@ -48,26 +51,35 @@ function Padlock() {
     }
 
     // Called when the "validate" button is pressed
-    // Just a simple alert for now to test the basic functionality.
     const validate = () => {
         const correct: boolean = isCorrect();
         if (correct) {
-            console.log('correct!');
+            // If they're right, toggle the locked state
             toggleLock();
         }
         else {
-            console.log('wrong!');
+            // If they're wrong, show the incorrect animation (shaking the padlock)
+            if (ref && ref.current) {
+                anime({
+                    targets: ref.current,
+                    translateX: [
+                        { value: '5px' },
+                        { value: '-5px' },
+                        { value: '5px' },
+                        { value: '0px' }
+                    ],
+                    duration: 400,
+                    autoplay: true,
+                    easing: 'easeInOutSine'
+                });
+            }
         }
     }
 
     return (
         <div className="padlock-app">
-            <div className="padlock">
-                {locked ?
-                    <Shackle className="shackle" style={{transform: 'translateY(155px)'}}/>
-                    : 
-                    <Shackle className="shackle" style={{transform: 'translateY(55px)'}}/>
-                }
+            <div className="padlock" ref={ref}>
+                <Shackle locked={locked}/>
                 <div className="padlock-body">
                     {/* This could be done in a loop, but it'd be more effort than it's worth. */}
                     <Digit digitID={0} value={values[0]} onClick={handleClick}/>

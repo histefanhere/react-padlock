@@ -1,12 +1,12 @@
-<svg width="68" height="99" viewBox="0 0 68 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="70" height="100" viewBox="0 0 70 100" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="shackle" filter="url(#filter0_d)">
-<circle id="right-fillet" cx="57.5" cy="55.5" r="6.5" fill="#9A9892"/>
-<rect id="right-straight" x="51" y="30" width="13" height="25" fill="#9A9892"/>
-<rect id="left-straight" x="4" y="30" width="13" height="64" fill="#9A9892"/>
-<path id="upper-curve" d="M64 30C64 22.0435 60.8393 14.4129 55.2132 8.7868C49.5871 3.16071 41.9565 6.00699e-07 34 0C26.0435 -6.00699e-07 18.4129 3.1607 12.7868 8.78679C7.16071 14.4129 4 22.0435 4 30L17.002 30C17.002 25.4918 18.7929 21.1683 21.9806 17.9806C25.1683 14.7929 29.4919 13.002 34 13.002C38.5082 13.002 42.8317 14.7929 46.0194 17.9806C49.2071 21.1683 50.998 25.4919 50.998 30H64Z" fill="#9A9892"/>
+<circle id="right-fillet" cx="58.5" cy="56.5" r="6.5" fill="#A9A8A2" stroke="#A9A8A2"/>
+<rect id="right-straight" x="52" y="31" width="13" height="25" fill="#A9A8A2" stroke="#A9A8A2"/>
+<rect id="left-straight" x="5" y="31" width="13" height="64" fill="#A9A8A2" stroke="#A9A8A2"/>
+<path id="upper-curve" d="M65 31C65 23.0435 61.8393 15.4129 56.2132 9.7868C50.5871 4.16071 42.9565 1 35 1C27.0435 0.999999 19.4129 4.1607 13.7868 9.78679C8.16071 15.4129 5 23.0435 5 31L18.002 31C18.002 26.4918 19.7929 22.1683 22.9806 18.9806C26.1683 15.7929 30.4919 14.002 35 14.002C39.5082 14.002 43.8317 15.7929 47.0194 18.9806C50.2071 22.1683 51.998 26.4919 51.998 31H65Z" fill="#A9A8A2" stroke="#A9A8A2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<filter id="filter0_d" x="0" y="0" width="68" height="102" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d" x="0.5" y="0.5" width="69" height="103" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
 <feOffset dy="4"/>
