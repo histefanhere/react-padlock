@@ -7,6 +7,9 @@
         text-align: center;
         vertical-align: middle;
         line-height: normal;
+
+        // The digits shouldn't be selectable
+        cursor: default;
     }
 
     .digit-btn {
