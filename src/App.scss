@@ -1,18 +1,42 @@
 .App {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-  height: 100vh;
+    height: 100vh;
 
-  // A bit *too* light
-  // background-color: lightseagreen;
-  // Nope, still too dark
-  // background-color: royalblue;
+    // A bit *too* light
+    // background-color: lightseagreen;
+    // Nope, still too dark
+    // background-color: royalblue;
 
-  // background-color: teal;
-  // background-color: steelblue;
-  // A linear combination of teal and steelblue from https://www.w3schools.com/colors/colors_mixer.asp?colorbottom=008080&colortop=FFFFFF
-  background-color: #23819a;
+    background-color: teal;
+    // background-color: steelblue;
+    // A linear combination of teal and steelblue from https://www.w3schools.com/colors/colors_mixer.asp?colorbottom=008080&colortop=FFFFFF
+    // background-color: #23819a;
+
+    // All buttons in the app should show pointers!
+    button {
+      cursor: pointer;
+    }
+
+    footer {
+      position:fixed;
+      bottom: 0;
+      left: 0;
+      padding-bottom: 20px;
+
+      a {
+        color: #33f;
+
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      width: 100%;
+      text-align: center;
+    }
 }
