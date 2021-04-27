@@ -41,26 +41,23 @@ function Padlock() {
     }
 
     // Called when the "validate" button is pressed
-    // Just a simple alert for now to test the basic functionality.
     const validate = () => {
         const correct: boolean = isCorrect();
         if (correct) {
+            // If they're right, toggle the locked state
             toggleLock();
         }
         else {
+            // If they're wrong, show the incorrect animation (shaking the padlock)
             if (ref && ref.current) {
                 anime({
                     targets: ref.current,
                     translateX: [
-                        { value: '6px' },
-                        { value: '-6px' },
-                        { value: '6px' },
+                        { value: '5px' },
+                        { value: '-5px' },
+                        { value: '5px' },
                         { value: '0px' }
                     ],
-                    // scale: [
-                    //     { value: 0.99 },
-                    //     { value: 1}
-                    // ],
                     duration: 400,
                     autoplay: true,
                     easing: 'easeInOutSine'

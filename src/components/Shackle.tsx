@@ -9,8 +9,6 @@ interface ShackleProps {
 }
 
 function Shackle(props: ShackleProps) {
-    // const refer: React.LegacyRef<Anime> = React.createRef();
-
     return (
         <Anime 
             easing={props.locked ? "easeInBack" : "easeOutBack"}
@@ -18,7 +16,6 @@ function Shackle(props: ShackleProps) {
             loop={false}
             autoplay={true}
             translateY={props.locked ? "160px" : "40px"}
-            // ref={refer}
         >
             <div><img src={shackle} alt="shackle" className="shackle"/></div>
         </Anime>
