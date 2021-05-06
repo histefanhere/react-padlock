@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-padlock/static/css/main.08aeea05.chunk.css",
+    "main.js": "/react-padlock/static/js/main.cca61f34.chunk.js",
+    "main.js.map": "/react-padlock/static/js/main.cca61f34.chunk.js.map",
+    "runtime-main.js": "/react-padlock/static/js/runtime-main.8c96162b.js",
+    "runtime-main.js.map": "/react-padlock/static/js/runtime-main.8c96162b.js.map",
+    "static/js/2.c3cb1b76.chunk.js": "/react-padlock/static/js/2.c3cb1b76.chunk.js",
+    "static/js/2.c3cb1b76.chunk.js.map": "/react-padlock/static/js/2.c3cb1b76.chunk.js.map",
+    "static/js/3.24a30c57.chunk.js": "/react-padlock/static/js/3.24a30c57.chunk.js",
+    "static/js/3.24a30c57.chunk.js.map": "/react-padlock/static/js/3.24a30c57.chunk.js.map",
+    "index.html": "/react-padlock/index.html",
+    "static/css/main.08aeea05.chunk.css.map": "/react-padlock/static/css/main.08aeea05.chunk.css.map",
+    "static/js/2.c3cb1b76.chunk.js.LICENSE.txt": "/react-padlock/static/js/2.c3cb1b76.chunk.js.LICENSE.txt",
+    "static/media/shackle.c927151e.svg": "/react-padlock/static/media/shackle.c927151e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c96162b.js",
+    "static/js/2.c3cb1b76.chunk.js",
+    "static/css/main.08aeea05.chunk.css",
+    "static/js/main.cca61f34.chunk.js"
+  ]
+}
