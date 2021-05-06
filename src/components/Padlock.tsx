@@ -4,6 +4,7 @@ import anime from 'animejs';
 import './Padlock.scss';
 import Digit from './Digit';
 import Shackle from './Shackle';
+import Pepe from './Pepe';
 
 // Utility function for randomly generating a number (inclusive)
 const randomInt = (min: number, max: number): number => {
@@ -18,6 +19,9 @@ function Padlock() {
 
     const [values, setValues] = useState(initialValues);
     const [locked, setLockState] = useState(true);
+
+    const [pepeHappy, setPepeHappy] = useState(false);
+    const [pepeVisible, setPepeVisibility] = useState(false);
 
     const correctValues = [1, 2, 3];
 
@@ -54,10 +58,15 @@ function Padlock() {
     const validate = () => {
         const correct: boolean = isCorrect();
         if (correct) {
+            if (locked) {
+                // Lock was just unlocked
+                showPepe(true);
+            }
             // If they're right, toggle the locked state
             toggleLock();
         }
         else {
+            showPepe(false);
             // If they're wrong, show the incorrect animation (shaking the padlock)
             if (ref && ref.current) {
                 anime({
@@ -76,8 +85,15 @@ function Padlock() {
         }
     }
 
+    const showPepe = (happy: boolean) => {
+        setPepeHappy(happy);
+        setPepeVisibility(true);
+        setTimeout(() => {setPepeVisibility(false)}, 1000);
+    }
+
     return (
         <div className="padlock-app">
+            <Pepe happy={pepeHappy} visible={pepeVisible}/>
             <div className="padlock" ref={ref}>
                 <Shackle locked={locked}/>
                 <div className="padlock-body">
