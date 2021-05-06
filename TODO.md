@@ -1,16 +1,22 @@
 # TODO
 
+- Put a screenshot of the project in the README
+
+- Create a video demonstration (and link in README?)
+
+- deploy using github pages? (on a second branch?)
+
+
+# COMPLETED
+
 - anime.js
   - https://codepen.io/AlikinVV/pen/OrmJxj (but not this much lol)
-
 - The guidelines say there has to be an image that flashes if it's right or wrong.
   - Can I just have a 0x0 image in the corner so I do technically meet those requirements?
-
 - react-anime
   - https://github.com/plus1tv/react-anime/blob/HEAD/documentation.md
   - https://codepen.io/alaingalvan/pen/WGJLmE
   - https://www.w3schools.com/cssref/css3_pr_transform.asp
-
 - README
 
 # Useful Links
