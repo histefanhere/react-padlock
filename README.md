@@ -1,5 +1,8 @@
 # react-padlock
 
+![image](https://user-images.githubusercontent.com/23431724/117433394-8a3ea200-af7f-11eb-9b5c-b2f555bca958.png)
+
+
 This is my submission project for a [NZMSA Post Workshop Competition](https://github.com/NZMSA/2021-introduction-to-general-software-development). It is a padlock web app where you try and unlock a padlock that has a set 3 digit combination. With a clean design and plenty of visual flares, it was a blast to make!
 
 **THE PASSWORD FOR THE LOCK IS 1-2-3.**
