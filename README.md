@@ -2,10 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/23431724/117433394-8a3ea200-af7f-11eb-9b5c-b2f555bca958.png)
 
-
 This is my submission project for a [NZMSA Post Workshop Competition](https://github.com/NZMSA/2021-introduction-to-general-software-development). It is a padlock web app where you try and unlock a padlock that has a set 3 digit combination. With a clean design and plenty of visual flares, it was a blast to make!
-
-**THE PASSWORD FOR THE LOCK IS 1-2-3.**
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), and it uses the languages and frameworks taught at the Software Development Workshop, most of which were new to me, such as:
 - Typescript
@@ -14,6 +11,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Git and GitHub
 - HTML and CSS (and SASS as an extra challenge)
 - Many other JS node librires, such as [react-anime](https://alain.xyz/libraries/react-anime) for the animations, and [github-corners](https://tholman.com/github-corners/) for the github link.
+
+_Hang on, this doesn't meet the base requirements for the competition! It explicitly says entering a correct/incorrect combination must make an image appear on the page!_
+Check the top left corner when you press validate :)
+
+## Demo
+
+**THE PASSWORD FOR THE LOCK IS 1-2-3.**
+
+[Demo website](https://histefanhere.github.io/react-padlock)
+
+[YouTube video demo](https://youtu.be/7ilzA7mnBBk)
 
 ## Getting Started
 
